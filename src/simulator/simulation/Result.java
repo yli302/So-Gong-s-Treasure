@@ -54,7 +54,7 @@ public class Result {
     public String toString() {
         return "--------------------------------------------\n" +
                 "Round Result:\n" +
-                "  target      : " + target[0] + " " + target[1] + " " + target + " \n" +
+                "  target      : " + target[0] + " " + target[1] + " " + target[2] + "\n" +
                 "  result      : " + (success ? "WIN" : "LOSE") + "\n" +
                 "  tried       : " + triedTimes + " time(s)" + "\n" +
                 "  useful tries: " + usefulTries + " time(s)" + "\n" +
