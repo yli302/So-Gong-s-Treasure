@@ -34,6 +34,7 @@ public class Simulator {
 
     public Result simulate() {
         char[] target = targetFlag ? targetValue : TargetGenerator.generate();
+        result.setTarget(target);
         if (!testPurpose && !hideTarget) System.out.println("\n-- Target: " + target[0] + " " + target[1] + " " + target[2] + "\n");
 
         while (true) {

@@ -8,6 +8,7 @@ public class Result {
     private int usefulTries;
     private int wastedTries;
     private boolean infiniteTries;
+    private char[] target;
 
     public Result() {
         this.triedTimes = 0;
@@ -23,6 +24,7 @@ public class Result {
     public void setMaxTries(int maxTries) {
         this.MAX_TRIES = maxTries;
     }
+    public void setTarget(char[] target) { this.target = target;}
 
     public void win() {
         this.success = true;
@@ -52,6 +54,7 @@ public class Result {
     public String toString() {
         return "--------------------------------------------\n" +
                 "Round Result:\n" +
+                "  target      : " + target.toString() +
                 "  result      : " + (success ? "WIN" : "LOSE") + "\n" +
                 "  tried       : " + triedTimes + " time(s)" + "\n" +
                 "  useful tries: " + usefulTries + " time(s)" + "\n" +
