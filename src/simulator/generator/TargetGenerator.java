@@ -10,7 +10,13 @@ public class TargetGenerator {
         Random random = new Random();
         target[0] = (char)('0' + random.nextInt(10));
         target[1] = (char)('0' + random.nextInt(10));
+        while (target[0] == target[1]) {
+            target[1] = (char)('0' + random.nextInt(10));
+        }
         target[2] = (char)('0' + random.nextInt(10));
+        while (target[0] == target[2] || target[1] == target[2]) {
+            target[2] = (char)('0' + random.nextInt(10));
+        }
 
         return target;
     }
